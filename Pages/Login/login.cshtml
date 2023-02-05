@@ -1,0 +1,45 @@
+﻿@page
+@model ST10091865WEBAPPPROG.Pages.Login.loginModel
+@section Scripts
+{
+    
+}
+<body style="background-color: lightcoral ">
+<br>
+<h2> Login </h2>
+@if(Model.AllFields.Length > 0)
+{
+    <div class = 'alert alert-warning alert-dismissable fade show' role = 'alert'>
+        <strong> @Model.AllFields</strong>
+        <button type = 'button' class = 'btn-close' data-bs-dismiss = 'alert' aria-label = 'Close'> </button>
+    </div>
+}
+@if(Model.error.Length > 0)
+{
+    <div class = 'alert alert-warning alert-dismissable fade show' role = 'alert'>
+        <strong> @Model.error</strong>
+        <button type = 'button' class = 'btn-close' data-bs-dismiss = 'alert' aria-label = 'Close'> </button>
+    </div>
+}
+<form method = "POST">
+    <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Student number</label>
+        <div class = "col-sm-6">
+            <input type = "text" class="form-control" name ="studentnr" value="" />
+        </div>
+    </div>
+     <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Password</label>
+        <div class = "col-sm-6">
+            <input type = "password" class="form-control" name ="pass" value="" />
+        </div>
+    </div>
+  <div class = "row mb-3">
+        <div class ="offset-sm-3 col-sm-3 d-grid">
+            <button type ="submit" class ="btn btn-primary">Login</button>
+            </div>
+        </div>
+<a class = 'btn btn-outline-primary' href = '/Login/Register'> Register here </a>
+
+</form>
+</body>

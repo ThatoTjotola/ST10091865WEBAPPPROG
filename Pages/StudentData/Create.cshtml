@@ -1,0 +1,88 @@
+﻿@page
+@model ST10091865WEBAPPPROG.Pages.StudentData.CreateModel
+@{
+}
+
+<!-- Create form-->
+<body style="background-color: lightcoral ">
+<br>
+<h2> Add Module </h2>
+    @if (Model.Success.Length > 0)
+    {
+        <div class = 'alert alert-success alert-dismissable fade show' role = 'alert'>
+        <strong> @Model.Success</strong>
+        <button type = 'button' class = 'btn-close' data-bs-dismiss = 'alert' aria-label = 'Close'> </button>
+    </div>
+        
+    }
+    @if(Model.Allfield.Length>0)
+{
+    <!-- Alert created for error handling-->
+    <div class = 'alert alert-warning alert-dismissable fade show' role = 'alert'>
+        <strong> @Model.Allfield</strong>
+        <button type = 'button' class = 'btn-close' data-bs-dismiss = 'alert' aria-label = 'Close'> </button>
+    </div>
+}
+
+<form method = "POST">
+    <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Module Name</label>
+        <div class = "col-sm-6">
+            <input type = "text" class="form-control" name ="name" value="" />
+        </div>
+    </div>
+   
+     <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Module Code</label>
+        <div class = "col-sm-6">
+            <input type = "text" class="form-control" name ="code" value="" />
+        </div>
+    </div>
+     <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Number Of Credits</label>
+        <div class = "col-sm-6">
+            <input type = "number" class="form-control" name ="credits" value="" />
+        </div>
+    </div>
+     <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Class Hours Per Week</label>
+        <div class = "col-sm-6">
+            <input type = "number" class="form-control" name ="hours" value="" />
+        </div>
+    </div>
+    
+     <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Number of weeks</label>
+        <div class = "col-sm-6">
+            <input type = "number" class="form-control" name ="weeks" value="" />
+        </div>
+    </div>
+     <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Start Date</label>
+        <div class = "col-sm-6">
+            <input type = "date" class="form-control" name ="date" value="" />
+        </div>
+    </div>
+    <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Number of hours spent on module:</label>
+        <div class = "col-sm-6">
+            <input type = "text" class="form-control" name ="specifichours" value="" />
+        </div>
+    </div>
+    <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">specific date</label>
+        <div class = "col-sm-6">
+            <input type = "date" class="form-control" name ="specific date" value="" />
+        </div>
+    </div>
+    <div class = "row mb-3">
+        <div class ="offset-sm-3 col-sm-3 d-grid">
+            <button type ="submit" class ="btn btn-primary">Submit</button>
+            
+        </div>
+        <div class = "col-sm-3 d-grid">
+            <a class = "btn btn-outline-primary" href = "/StudentData/Index" role = "button">ViewData</a>
+        </div>
+</div>
+</form>
+</body>

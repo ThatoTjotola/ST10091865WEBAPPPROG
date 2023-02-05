@@ -1,0 +1,39 @@
+﻿@page
+@model ST10091865WEBAPPPROG.Pages.StudentData.IndexModel
+@{
+ 
+}
+
+<body style="background-color: lightcoral ">
+<br>
+<h2> Modules </h2>
+<!-- Buttons too navigate between pages -->
+<a class = 'btn btn-primary btn-sm' href = '/StudentData/Create'>Add</a>
+
+<table class = "table">
+    <thead>
+        <tr>
+
+           
+            <th>Module Name</th>
+            <th>Module Code</th>
+            <th>Self Study Time</th>
+            <th>Actual-Self Study Time</th>
+</tr>
+</thead>
+<tbody>
+    <!-- Foreach used to display the user data specific too the user -->
+    @foreach(var item in Model.studlist)
+{
+            <tr>
+           
+            <td>@item.modulenam</td>
+            <td>@item.modulecod</td>
+            <td>@item.selfstudytim</td>
+            <td>@item.actualselfstudytim</td>
+</tr> 
+        }
+    </tbody>
+</table>
+</body>
+

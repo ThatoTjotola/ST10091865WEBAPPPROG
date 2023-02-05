@@ -1,0 +1,48 @@
+﻿@page
+@model ST10091865WEBAPPPROG.Pages.Login.RegisterModel
+
+<body style="background-color: lightcoral ">
+<br>
+<h2> Register</h2>
+<!-- error handlings-->
+@if(Model.ErrorMessage.Length>0)
+{
+    <div class = 'alert alert-warning alert-dismissable fade show' role = 'alert'>
+        <strong> @Model.ErrorMessage</strong>
+        <button type = 'button' class = 'btn-close' data-bs-dismiss = 'alert' aria-label = 'Close'> </button>
+    </div>
+}
+@if(Model.AllFieldsRequired.Length>0)
+{
+     <div class = 'alert alert-warning alert-dismissable fade show' role = 'alert'>
+        <strong> @Model.AllFieldsRequired</strong>
+        <button type = 'button' class = 'btn-close' data-bs-dismiss = 'alert' aria-label = 'Close'> </button>
+    </div>
+}
+<form method = "POST">
+    <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Student Number </label>
+        <div class = "col-sm-6">
+            <input type = "text" class="form-control" name ="studnum" value="" />
+        </div>
+    </div>
+    <div class = "row mb-3">
+        <label class = "col-sm-3 col-form-label">Password</label>
+        <div class = "col-sm-6">
+            <input type = "password" class="form-control" name ="pass" value="" />
+        </div>
+    </div>
+
+  
+    
+    <div class = "row mb-3">
+        <div class ="offset-sm-3 col-sm-3 d-grid">
+            <button type ="submit" class ="btn btn-primary" >Register</button>
+            
+        </div>
+       
+        <a  href = '/Login/login'>Already have a account? click here for login page </a>
+        
+</div>
+</form>
+</body>

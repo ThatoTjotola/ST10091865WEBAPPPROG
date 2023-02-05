@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+<!-- 
+  <ItemGroup>
+    <Content Remove="Pages\Login\Register.cshtml" />
+  </ItemGroup>
+-->
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ClassLibrary">
+      <HintPath>..\ClassLibrary\bin\Debug\ClassLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="PoePart1ST10091865">
+      <HintPath>..\..\Second year\PROG6212 ST10091865 JIMMY TJOTOLA POE PART 2\ST10091865ProgPart2\bin\Debug\net6.0-windows\PoePart2ST10091865.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+<!--
+	<ItemGroup>
+		<UpToDateCheckInput Remove="Pages\Login\Register.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<_ContentIncludedByDefault Remove="Pages\Login\Register.cshtml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Pages\Login\Register.cshtml" />
+	</ItemGroup>
+-->
+
+</Project>
